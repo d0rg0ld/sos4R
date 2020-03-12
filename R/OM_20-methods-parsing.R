@@ -72,7 +72,7 @@ parseObservation_2.0 <- function(obj, sos, verbose = FALSE, retrieveFOI = TRUE) 
         if (retrieveFOI) {
           if (verbose) cat("[parseObservation_2.0] referenced featureOfInterest is not cached, retrieving... \n")
           foiList <- sos4R::getFeatureOfInterest(sos = sos, featureOfInterest = featureOfInterest@href, verbose = verbose)
-          print(repr(foiList))
+          print(foiList)
           # getFeatureOfInterest returns a list, but a request including a featureOfInterest id
           # should return only one featureOfInterest
           if (length(foiList) == 1) {
